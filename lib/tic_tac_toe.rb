@@ -27,9 +27,22 @@ def move(board, user_index, character)
   return board
 end
 
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
-end
-
 def valid_move?(board, index)
-  if 
+  def position_taken?(board, index)
+    !(board[index].nil? || board[index] == " ")
+  end
+  def on_board?(index)
+     if index.between?(0, 8) == true
+       return true
+     else
+       return false
+     end
+   end
+
+   if (position_taken?(board, index) == true) && (on_board?(index) == true)
+     return true
+   else
+     return false
+   end
+ end
+
