@@ -39,7 +39,7 @@ def on_board?(num)
      return false
    end
  end
- 
+
 def valid_move?(board, index)
    if (position_taken?(board, index) == true) && (on_board?(index) == true)
      return true
