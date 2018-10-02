@@ -18,15 +18,18 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-  user_index = user_input.to_i
-  user_index = user_index -1
+  index = user_input.to_i
+  index = index -1
 end
 
 def move(board, user_index, character)
-  board[user_index] = character
+  board[index] = character
   return board
 end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
+
+def valid_move?(board, index)
+  if 
