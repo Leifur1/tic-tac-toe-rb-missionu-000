@@ -95,3 +95,12 @@ def full?(board)
   board.all? do |index| index == "X" || index == "O"
   end
 end
+
+def draw?(board)
+  if full?(board) || !won?(board)
+    return true
+  else
+    return false
+  end
+end
+    
