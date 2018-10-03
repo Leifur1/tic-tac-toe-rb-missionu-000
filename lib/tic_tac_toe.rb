@@ -44,7 +44,9 @@ def turn (board)
   user_input = gets.chomp
   index = input_to_index(user_input)
   if valid_move?(board, index) == true
-    move(board, index)
+    character = current_player(board)
+    move(board, index, character)
+    display_board(board)
   else
     print "Please enter a valid input 1-9:"
     user_input = gets.strip
