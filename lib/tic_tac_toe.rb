@@ -22,7 +22,7 @@ def input_to_index(user_input)
   index = index -1
 end
 
-def move(board, index, character)
+def move(board, index)
   board[index] = character
   return board
 end
