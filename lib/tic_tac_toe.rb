@@ -22,7 +22,7 @@ def input_to_index(user_input)
   index = index -1
 end
 
-def move(board, index)
+def move(board, index, character)
   board[index] = character
   return board
 end
@@ -44,7 +44,7 @@ def turn(board,index)
  user_input = gets.chomp
  index = input_to_index(user_input)
  if valid_move?(board, index) == true
-   move(board, index)
+   move(board, index, character)
    display_board(board)
  else
    print "Please enter valid input:"
