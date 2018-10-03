@@ -48,6 +48,6 @@ def turn(board,index)
    display_board(board)
  else
    print "Please enter valid input:"
-   user_input.gets.strip
+   user_input.gets.chomp
  end
 end
