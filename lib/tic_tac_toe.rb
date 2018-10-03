@@ -46,7 +46,7 @@ def valid_move?(board, index)
    if valid_move?(board, index) == true
      move(board, index)
      display_board(board)
-   else 
+   else
      print "Please enter valid input:"
      user_input.gets.strip
    end
